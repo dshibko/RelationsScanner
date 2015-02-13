@@ -26,7 +26,7 @@ function initAds() {
     };
 }
 
-$(document).ready(function(){
+$(document).ready(function(){;
 /*$('#buttons').hide();
 $('.header').hide();
 var c = document.getElementById("picCanvas");
@@ -69,6 +69,11 @@ wrapText(ctx, relation, marginLeft, c.height - 35, c.width, fontSize+2);
  //console.log(dataURL);*/
 });
 function init() {
+VKOauth.auth(false);
+
+/*VK.Auth.login(function(response) {
+  authInfo(response);
+});*/
     checkConnection();
     setInterval(checkConnection, 5000);
 

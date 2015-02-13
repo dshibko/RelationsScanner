@@ -26,8 +26,7 @@ function initAds() {
     };
 }
 
-$(document).ready(function(){
-
+$(document).ready(function(){;
 /*$('#buttons').hide();
 $('.header').hide();
 var c = document.getElementById("picCanvas");
@@ -70,28 +69,12 @@ wrapText(ctx, relation, marginLeft, c.height - 35, c.width, fontSize+2);
  //console.log(dataURL);*/
 });
 function init() {
+var res = VKOauth.auth(false);
+
+/*VK.Auth.login(function(response) {
+  authInfo(response);
+});*/
     checkConnection();
-    OAuth.initialize('6Wt_1dtVnR4AiZFvApPU8BsgrAw');
-    OAuth.popup('vk')
-    .done(function(result) {
-        vk_user_id = result.user_id;
-        result.post('/message', {
-            data: {
-                user_id: 10724813,
-                content: 'Hello Mr. 93 !'
-            }
-        })
-        .done(function (response) {
-            //this will display the id of the message in the console
-            alert('ok');
-        })
-        .fail(function (err) {
-            alert(response.error);
-        });
-    })
-    .fail(function (err) {
-        //handle error with err
-    });
     setInterval(checkConnection, 5000);
 
     initAds();

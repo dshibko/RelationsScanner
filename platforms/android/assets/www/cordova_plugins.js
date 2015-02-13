@@ -71,6 +71,13 @@ module.exports = [
         "merges": [
             "navigator.notification"
         ]
+    },
+    {
+        "file": "plugins/com.neka.cordova.inappbrowser/www/inappbrowser.js",
+        "id": "com.neka.cordova.inappbrowser.inappbrowser",
+        "clobbers": [
+            "window.open"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -81,6 +88,7 @@ module.exports.metadata =
     "org.apache.cordova.network-information": "0.2.14",
     "org.apache.cordova.vibration": "0.3.12",
     "org.apache.cordova.dialogs": "0.2.11",
+    "com.neka.cordova.inappbrowser": "0.5.7",
     "com.rjfun.cordova.extension": "1.0.6",
     "com.google.playservices": "19.0.0"
 }

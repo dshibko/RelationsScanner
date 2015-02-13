@@ -65,7 +65,6 @@
 /home/dmitry/phoneGap/test1/platforms/android/assets/www/icon.png \
 /home/dmitry/phoneGap/test1/platforms/android/assets/www/spec \
 /home/dmitry/phoneGap/test1/platforms/android/assets/www/cordova_plugins.js \
-/home/dmitry/phoneGap/test1/platforms/android/assets/www/oauth.js \
 /home/dmitry/phoneGap/test1/platforms/android/assets/www/res \
 /home/dmitry/phoneGap/test1/platforms/android/assets/www/js/bootstrap.min.js \
 /home/dmitry/phoneGap/test1/platforms/android/assets/www/js/index.js \
@@ -75,6 +74,7 @@
 /home/dmitry/phoneGap/test1/platforms/android/assets/www/js/jquery.facedetection.min.js.map \
 /home/dmitry/phoneGap/test1/platforms/android/assets/www/js/jquery-2.1.3.min.js \
 /home/dmitry/phoneGap/test1/platforms/android/assets/www/js/html2canvas.js \
+/home/dmitry/phoneGap/test1/platforms/android/assets/www/js/oauth.js \
 /home/dmitry/phoneGap/test1/platforms/android/assets/www/fonts/glyphicons-halflings-regular.ttf \
 /home/dmitry/phoneGap/test1/platforms/android/assets/www/fonts/glyphicons-halflings-regular.woff \
 /home/dmitry/phoneGap/test1/platforms/android/assets/www/fonts/glyphicons-halflings-regular.svg \
@@ -96,11 +96,10 @@
 /home/dmitry/phoneGap/test1/platforms/android/assets/www/plugins/org.apache.cordova.device-orientation \
 /home/dmitry/phoneGap/test1/platforms/android/assets/www/plugins/org.apache.cordova.camera \
 /home/dmitry/phoneGap/test1/platforms/android/assets/www/plugins/org.apache.cordova.network-information \
-/home/dmitry/phoneGap/test1/platforms/android/assets/www/plugins/com.oauthio.plugins.oauthio \
 /home/dmitry/phoneGap/test1/platforms/android/assets/www/plugins/org.apache.cordova.vibration \
 /home/dmitry/phoneGap/test1/platforms/android/assets/www/plugins/org.apache.cordova.device-motion \
 /home/dmitry/phoneGap/test1/platforms/android/assets/www/plugins/com.google.cordova.admob \
-/home/dmitry/phoneGap/test1/platforms/android/assets/www/plugins/org.apache.cordova.inappbrowser \
+/home/dmitry/phoneGap/test1/platforms/android/assets/www/plugins/com.neka.cordova.inappbrowser \
 /home/dmitry/phoneGap/test1/platforms/android/assets/www/plugins/org.apache.cordova.dialogs/www \
 /home/dmitry/phoneGap/test1/platforms/android/assets/www/plugins/org.apache.cordova.dialogs/www/notification.js \
 /home/dmitry/phoneGap/test1/platforms/android/assets/www/plugins/org.apache.cordova.dialogs/www/android \
@@ -117,9 +116,6 @@
 /home/dmitry/phoneGap/test1/platforms/android/assets/www/plugins/org.apache.cordova.network-information/www \
 /home/dmitry/phoneGap/test1/platforms/android/assets/www/plugins/org.apache.cordova.network-information/www/network.js \
 /home/dmitry/phoneGap/test1/platforms/android/assets/www/plugins/org.apache.cordova.network-information/www/Connection.js \
-/home/dmitry/phoneGap/test1/platforms/android/assets/www/plugins/com.oauthio.plugins.oauthio/www \
-/home/dmitry/phoneGap/test1/platforms/android/assets/www/plugins/com.oauthio.plugins.oauthio/www/dist \
-/home/dmitry/phoneGap/test1/platforms/android/assets/www/plugins/com.oauthio.plugins.oauthio/www/dist/oauth.js \
 /home/dmitry/phoneGap/test1/platforms/android/assets/www/plugins/org.apache.cordova.vibration/www \
 /home/dmitry/phoneGap/test1/platforms/android/assets/www/plugins/org.apache.cordova.vibration/www/vibration.js \
 /home/dmitry/phoneGap/test1/platforms/android/assets/www/plugins/org.apache.cordova.device-motion/www \
@@ -127,8 +123,8 @@
 /home/dmitry/phoneGap/test1/platforms/android/assets/www/plugins/org.apache.cordova.device-motion/www/accelerometer.js \
 /home/dmitry/phoneGap/test1/platforms/android/assets/www/plugins/com.google.cordova.admob/www \
 /home/dmitry/phoneGap/test1/platforms/android/assets/www/plugins/com.google.cordova.admob/www/AdMob.js \
-/home/dmitry/phoneGap/test1/platforms/android/assets/www/plugins/org.apache.cordova.inappbrowser/www \
-/home/dmitry/phoneGap/test1/platforms/android/assets/www/plugins/org.apache.cordova.inappbrowser/www/inappbrowser.js \
+/home/dmitry/phoneGap/test1/platforms/android/assets/www/plugins/com.neka.cordova.inappbrowser/www \
+/home/dmitry/phoneGap/test1/platforms/android/assets/www/plugins/com.neka.cordova.inappbrowser/www/inappbrowser.js \
 /home/dmitry/phoneGap/test1/platforms/android/assets/www/spec/helper.js \
 /home/dmitry/phoneGap/test1/platforms/android/assets/www/spec/index.js \
 /home/dmitry/phoneGap/test1/platforms/android/assets/www/spec/lib \

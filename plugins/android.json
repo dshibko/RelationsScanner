@@ -61,6 +61,10 @@
                         {
                             "xml": "<feature name=\"Notification\"><param name=\"android-package\" value=\"org.apache.cordova.dialogs.Notification\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"InAppBrowser\"><param name=\"android-package\" value=\"com.neka.cordova.inappbrowser.InAppBrowser\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -81,6 +85,9 @@
             "PACKAGE_NAME": "com.rjfun.test1"
         },
         "org.apache.cordova.dialogs": {
+            "PACKAGE_NAME": "com.rjfun.test1"
+        },
+        "com.neka.cordova.inappbrowser": {
             "PACKAGE_NAME": "com.rjfun.test1"
         }
     },
