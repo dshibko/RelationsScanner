@@ -20,6 +20,16 @@
     <feature name="InAppBrowser">
         <param name="android-package" value="com.neka.cordova.inappbrowser.InAppBrowser" />
     </feature>
+    <feature name="Canvas2ImagePlugin">
+        <param name="android-package" value="org.devgeeks.Canvas2ImagePlugin.Canvas2ImagePlugin" />
+    </feature>
+    <feature name="File">
+        <param name="android-package" value="org.apache.cordova.file.FileUtils" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="FileTransfer">
+        <param name="android-package" value="org.apache.cordova.filetransfer.FileTransfer" />
+    </feature>
     <name>Сканер Отношений</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.

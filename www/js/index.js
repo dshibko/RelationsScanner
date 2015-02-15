@@ -26,7 +26,7 @@ function initAds() {
     };
 }
 
-$(document).ready(function(){;
+//$(document).ready(function(){;
 /*$('#buttons').hide();
 $('.header').hide();
 var c = document.getElementById("picCanvas");
@@ -67,13 +67,10 @@ wrapText(ctx, relation, marginLeft, c.height - 35, c.width, fontSize+2);
 //c.height = $('#cameraPic').height()+500;
  //var dataURL = c.toDataURL("image/png");
  //console.log(dataURL);*/
-});
-function init() {
-VKOauth.auth(false);
+//});
 
-/*VK.Auth.login(function(response) {
-  authInfo(response);
-});*/
+function init() {
+
     checkConnection();
     setInterval(checkConnection, 5000);
 
@@ -81,7 +78,7 @@ VKOauth.auth(false);
     if(AdMob) {
         AdMob.createBanner({
             adId: admobid.banner,
-            position: AdMob.AD_POSITION.TOP_CENTER,
+            position: AdMob.AD_POSITION.BOTTOM_CENTER,
             autoShow: true
         });
 
@@ -92,11 +89,11 @@ VKOauth.auth(false);
     }
 
     $('#takePic').bind('click', function() {
-        navigator.camera.getPicture(getPhoto,null,{quality:60,destinationType:0,targetWidth: 800});
+        navigator.camera.getPicture(getPhoto,null,{quality:80,destinationType:0,correctOrientation: true});
     });
 
     $('#uploadPic').bind('click', function() {
-        navigator.camera.getPicture(getPhoto,null,{quality:50,destinationType:0,sourceType:0});
+        navigator.camera.getPicture(getPhoto,null,{quality:50,destinationType:0,sourceType:0,correctOrientation: true});
     });
 
     $('#startScan').bind('click', function() {
@@ -119,7 +116,6 @@ VKOauth.auth(false);
         $('#canvasContainer').hide();
         $('#canvasContainer').html('<canvas id="picCanvas"></canvas>');
 
-        $('.vkShare').html('');
         $('.vkShare').hide();
         $('#cameraPic').hide();
         $('#newScan').hide();
@@ -128,8 +124,6 @@ VKOauth.auth(false);
         $('#cameraPic').hide('slow');
         $(".progress-bar").parent().hide();
     });
-
-
 }
 
 function checkConnection() {
@@ -150,7 +144,6 @@ function closeApp() {
 }
 
 function getPhoto(data) {
-    //alert($.md5(data));
     $('p.header').hide();
     $('#buttons').hide();
 
@@ -186,7 +179,7 @@ function scan() {
          step: function( now, fx ) {
             $('.shadow').css('height', now - parseFloat($('#cameraPic').offset().top));
          },
-         duration: 7000,
+         duration: 1000,
          easing: "linear",
          complete: function() {
              $('#scanLine').css('width', $('#cameraPic').height());
@@ -202,7 +195,7 @@ function scan() {
                 step: function( now, fx ) {
                     $('.shadow').css('width', now - $('#cameraPic').offset().left + $('#scanLine').width() / 2);
                 },
-                duration: 7000,
+                duration: 1000,
                 easing: "linear",
                 complete: function() {
                     $('.shadow').width(0);
@@ -228,7 +221,28 @@ function showResult() {
 
     html2canvas($('#picContainer'), {
         onrendered: function(canvas) {
-            $.post("http://us-faces.esy.es/uploads.php", {image: canvas.toDataURL('image/png')})
+        window.canvas2ImagePlugin.saveImageDataToLibrary(
+                function(msg) {
+                    fileURL = msg;
+                    navigator.notification.vibrate(300);
+                    $('#newScan').show('slow');
+                    $('.vkShare').show('slow');
+                    $('.vkShare button').bind('click', function() {
+                        plugin_vk.auth(false);
+
+                    });
+                },
+                function(err){
+                    navigator.notification.alert(
+                        'Не удалось сохранить результат :(',
+                        null,
+                        '',
+                        'ОК'
+                    );
+                },
+                canvas
+            );
+            /*$.post("http://us-faces.esy.es/uploads.php", {image: canvas.toDataURL('image/png')})
                 .done(function( data ) {
                     navigator.notification.vibrate(300);
                     $('body').append('<p id="pic">'+data+'</p>');
@@ -241,9 +255,13 @@ function showResult() {
                     }, { type: 'custom', text: '<button type="button" class="btn btn-primary"><div class="vkLogo"></div><span class="shareText">&nbsp;Поделиться с друзьями</span></button>' }));
                     $('#newScan').show('slow');
                     $('.vkShare').show('slow');
-                });
+                });*/
         }
     });
+}
+
+function hideSharing() {
+    $('.vkShare').hide();
 }
 
 function getRandom(min, max) {
